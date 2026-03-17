@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "CSP Violation Trigger (Demo)",
+  "version": "1.0.0",
+  "description": "Injects third-party HTTP resources into a target page to trigger CSP violations for testing.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://example.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
